@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar desafio5",
+      "type": "process",
+      "command": "C:/raylib/w64devkit/bin/gcc.exe",
+      "args": ["${workspaceFolder}/desafio5.c", "-o", "${workspaceFolder}/desafio5.exe", "-I", "C:/raylib/raylib/src", "-L", "C:/raylib/raylib/src", "-lraylib", "-lopengl32", "-lgdi32", "-lwinmm", "-std=c99", "-Wall", "-Wextra"],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "Rodar desafio5",
+      "type": "process",
+      "command": "${workspaceFolder}/desafio5.exe",
+      "dependsOn": "Compilar desafio5",
+      "problemMatcher": []
+    }
+  ]
+}
